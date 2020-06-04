@@ -419,5 +419,9 @@ query.match = match;
 query.traverse = traverse;
 query.matches = matches;
 query.query = query;
+query.override = function (visitorKeys) {
+    estraverse.VisitorKeys = visitorKeys;
+    return query;
+};
 
 export default query;
